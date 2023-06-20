@@ -1,0 +1,23 @@
+-- create a table
+CREATE TABLE students (
+id INT,
+name varchar(50),
+age INT,
+major varchar(50),
+subject varchar(50),
+mark INT
+);
+INSERT INTO students(id,name,age,major,subject,mark)
+VALUES(1,'Gopu',23,'Mathematics','Algebra',100),
+      (2,'Ammu',18,'Biology','Zoology',98),
+      (3,'Saran',24,'Biology','Botany',97),
+      (4,'Dhana',22,'Science','Physics',96),
+      (5,'Sudhan',17,'Computer Science','JAVA',95),
+      (6,'Kani',16,'Science','Chemistry',94),
+      (7,'Madhu',19,'Mathematics','Algebra',86),
+      (8,'Kiruba',21,'Biology','Zoology',96),
+      (9,'Aswini',20,'Computer Science','JAVA',93),
+      (10,'Anisha',22,'Biology','Agri',94);
+SELECT subject,AVG(mark) AS "AVERAGE MARKS" FROM students GROUP BY subject;
+SELECT sum(mark) FROM students;
+  
